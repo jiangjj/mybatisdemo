@@ -1,10 +1,10 @@
-package org.mybatis.services;
+package com.mybatis3.services;
 
+import com.mybatis3.domain.Student;
 import org.junit.AfterClass;
 import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
-import org.mybatis.domain.Student;
 
 import java.util.Date;
 import java.util.List;
@@ -27,7 +27,7 @@ public class StudentServiceTest {
 
     @Test
     public void testFindAllStudents() {
-        List<Student> students = studentService.findAllStudents();
+        List<Student> students = studentService.findAllStudents(0, 10);
         Assert.assertNotNull(students);
         for (Student student : students) {
             System.out.println(student);
